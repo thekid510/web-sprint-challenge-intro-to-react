@@ -7,7 +7,7 @@ color:red;
 ` 
 const DataContainer = (props) => {
     const { swData } = props;
-    
+    console.log(props)
   return ( 
       <div> 
           {swData && <img src ={swData.url} />}
