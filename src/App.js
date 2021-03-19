@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios'
+import DataContainer from './components/Character'
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -10,7 +11,7 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   const [swData, setSwData] = useState([])
-  const [currentPerson, setCurrentPer] = useState('1')
+  
   useEffect(()=>{
     axios.get("https://swapi.dev/api/people/")
     .then(res =>{
@@ -27,6 +28,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header"> Star Wars Characters</h1>
+      <DataContainer swData={swData} swName={swData.name}  />
     </div>
   );
 }
