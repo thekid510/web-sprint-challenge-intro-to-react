@@ -29,7 +29,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header"> Star Wars Characters</h1>
       { swData.map(item => (
-    <DataContainer swData={item} swName={item} />
+    <DataContainer swData={item} swName={item} swBirth={item} />
   ))
 }   
     </div>

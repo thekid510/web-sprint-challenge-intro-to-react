@@ -17,10 +17,11 @@ const DataContainer = (props) => {
         
                 <StyledTitle className ='name'>
                     {swData.name}
+                    
                  </StyledTitle>
                  {swData && <p title ={swData.birth_year} />}
-                     {console.log(swData.birth_year)}
-                     {swData.birth_year}
+                    {console.log(swData.birth_year)}
+                    {`Birth Year: ${swData.birth_year}`}
       </div>
   )  
 } 
