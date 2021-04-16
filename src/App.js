@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import axios from "axios";
+import styled from 'styled-components'
+
 
 
 const App = () => {
@@ -22,10 +24,19 @@ const App = () => {
         console.log(err)
       })
     },[])
+const StyledHeader=styled.h1 `
+color: blue;
+transition: fill 0.25s;
+&hover{
+color: red;
+}
+
+`
+
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <StyledHeader className="Header">Star Wars Episode 4 "A New Hope" Characters</StyledHeader>
     </div>
   );
 }
